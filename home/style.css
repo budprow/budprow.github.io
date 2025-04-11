@@ -1,0 +1,100 @@
+/* Reset and General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    height: 100%; /* Ensure full height */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f4;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100%; /* Ensure full height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertical centering */
+    margin: 0;
+}
+
+.container {
+    margin: 0 auto; /* Center horizontally */
+    width: 100%; /* Take full width */
+}
+
+/* Header */
+header {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem 0;
+}
+
+.header-content {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Center horizontally */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.faceshot {
+    width: 250px; /* Adjusted size */
+    height: 250px; /* Adjusted size */
+    border-radius: 50%; /* Circular */
+    object-fit: cover;
+    margin-right: 2rem; /* Spacing to the right */
+}
+
+.intro {
+    text-align: left; /* Align text to the left */
+}
+
+.intro h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.intro h2 {
+    font-size: 1.5rem;
+    color: #666;
+}
+
+/* Navigation */
+.main-nav {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.main-nav ul {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0 1rem;
+}
+
+.main-nav li {
+    margin: 0 1.5rem;
+}
+
+.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #f0c14b;
+}
+
