@@ -1,0 +1,124 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #2f3035;
+    background-image: url(images/background-adare-restaurant.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100%; /* Ensure body is at least the height of the viewport */
+}
+
+.container {
+    /* width: 1024px;  Fixed width removed */
+    max-width: 1024px; /* Added max-width */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px; /* Added padding */
+    padding-right: 20px; /* Added padding */
+}
+
+header {
+    height: auto;  /* Changed to auto */
+    text-align: center;
+    padding: 20px 0; /* Added padding for spacing */
+}
+
+header img {
+    max-width: 100%; /* Ensure logo scales down */
+    height: auto;    /* Maintain aspect ratio */
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.33);
+    padding-top: 14px;
+    padding-bottom: 14px;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: inline-block; /* Important for spacing */
+}
+
+main {
+    /* height: 400px; Fixed height removed */
+    min-height: 400px; /* Added min-height */
+    text-align: center;
+    padding: 80px 20px; /* Reduced and made symmetrical */
+}
+
+h1 {
+    font-size: 84px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3em;  /* Relative unit */
+}
+
+p {
+    font-size: 18px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;    /* Relative unit */
+    line-height: 1.6; /* Added line height for readability */
+}
+
+a {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.50);
+    height: auto;   /* Changed to auto */
+    padding: 25px 0;
+    text-align: center;
+}
+
+footer p {
+    color: rgb(150, 150, 150);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+}
+
+.maps {
+    /* width: 1024px;  Fixed width removed */
+    max-width: 100%; /* Added max-width */
+    height: 500px;
+}
+
+/* Media Queries  */
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    nav a {
+        display: block;  /* Stack links vertically */
+        padding: 10px 0;
+    }
+
+    .maps {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    main {
+        padding-top: 60px;
+    }
+
+    .maps {
+        height: 300px;
+    }
+}
