@@ -100,6 +100,14 @@ header {
 
 /* Main */
 
+.projects-list {
+    max-width: 1200px; /* Match header/nav width */
+    margin: 2rem auto; /* Add vertical spacing and center */
+    padding: 0 1rem; /* Padding on the sides */
+    display: flex; /* Enable flexbox */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 1.5rem; /* Spacing between cards */
+}
 .projects-list h2 {
     text-align: center;
     margin-top: 1em;
@@ -112,6 +120,7 @@ header {
     font-size: 2.2em;
     font-weight: 600;
     color: #3a3a3a;
+    width: 100%; /* Make heading take full width to center properly */
     letter-spacing: 1px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
@@ -129,12 +138,40 @@ header {
     border-radius: 3px;
   }
   
+/* --- Project Item Card Styling --- */
+.project-item {
+    background-color: #fff; /* Card background */
+    border-radius: 8px; /* Rounded corners */
+    padding: 1.5rem; /* Inner spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    flex: 1 1 calc(33.333% - 1.5rem); /* Basis for 3 columns, accounting for gap */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    display: flex; /* Use flexbox for internal alignment */
+    flex-direction: column; /* Stack content vertically */
+}
+
+.project-item h3 {
+    margin-bottom: 0.75rem;
+    color: #333;
+}
+
+.project-item p:last-of-type {
+    margin-top: auto; /* Push the link to the bottom */
+    padding-top: 1rem; /* Add some space above the link */
+}
+
   /* --- Responsiveness --- */
   /* On smaller screens, you might want to adjust the font size */
   @media (max-width: 768px) {
     .projects-list h2 {
       font-size: 1.9em; /* Slightly smaller font */
     }
+  }
+  /* Adjust card layout for medium screens (2 columns) */
+  @media (max-width: 992px) {
+      .project-item {
+          flex-basis: calc(50% - 1rem); /* Basis for 2 columns */
+      }
   }
   
   @media (max-width: 480px) {
@@ -146,4 +183,10 @@ header {
        width: 80%; /* Make underline relatively wider on small screens */
        height: 3px; /* Make underline slightly thinner */
     }
+  }
+  /* Adjust card layout for small screens (1 column) */
+  @media (max-width: 768px) { /* Re-using 768px breakpoint */
+      .project-item {
+          flex-basis: 100%; /* Full width for 1 column */
+      }
   }

@@ -1,0 +1,326 @@
+/* === Global Styles === */
+html {
+    background-image: linear-gradient(#FC5E55, #fa4083);
+    /* Apply gradient to body instead for better background control */
+}
+
+body {
+    background: url(images/image-lion-background.png) no-repeat top center, linear-gradient(#FC5E55, #fa4083); /* Combine backgrounds */
+    background-position: top center;
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 1.125rem;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* === Layout === */
+.container {
+    max-width: 1024px; /* Use max-width for responsiveness */
+    width: 90%; /* Allow shrinking */
+    min-height: 300px;
+    margin: 0 auto; /* Simplified centering */
+}
+
+header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid lightgrey;
+}
+
+main {
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.main2 {
+    min-height: 300px;
+    padding-top: 50px;
+}
+
+/* === Components === */
+
+/* --- Cards --- */
+.cards {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    gap: 20px; /* Add space between cards */
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+.card1 {
+    background-image: url(images/image-background-card1.jpg);
+    background-size: cover;
+    background-position: bottom;
+    min-height: 250px;
+    width: calc(33.333% - 14px); /* Adjust width for gap */
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.24);
+}
+
+.card2 {
+    background-image: url(images/image-background-card2.jpg);
+    background-size: cover;
+    background-position: bottom;
+    min-height: 250px;
+    width: calc(33.333% - 14px); /* Adjust width for gap */
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.24);
+}
+
+.card3 {
+    background-image: url(Images/image-background-card3.jpg);
+    background-size: cover;
+    background-position: bottom;
+    min-height: 250px;
+    width: calc(33.333% - 14px); /* Adjust width for gap */
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.24);
+}
+
+.card1, .card2, .card3 {
+    padding: 30px 20px; /* Simplified padding */
+    box-sizing: border-box;
+}
+
+/* --- Hero Section --- */
+.herobox1 {
+    flex: 2;
+    padding-right: 100px;
+}
+
+.herobox2 {
+    flex: 1;
+}
+
+/* --- Logo --- */
+.logo {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    flex: 2;
+}
+
+/* === Typography === */
+h1 {
+    font-size: 3.125rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.24);
+}
+
+h2 {
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+    margin-top: 20px
+}
+
+p {
+    line-height: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.cards p {
+    font-size: 0.85rem;
+    line-height: 1.2rem;
+    margin-top: 10px;
+} 
+/* --- Buttons --- */
+.mybutton {
+    display: inline-block; /* Ensure margin-top works */
+    background-color: white;
+    color: #FC5E55;
+    font-family: 'Playfair Display', serif;
+    padding: 11px 25px;
+    border-radius: 100px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.24);
+}
+
+.mybutton:hover {
+    background-color: aquamarine;
+    transition-duration: 1s;
+}
+
+a.mybutton {
+    display: inline-block;
+    margin-top: 20px; /* Keep this specific one if needed */
+}
+
+.navbutton {
+    background-color: #FC5E55; /* Added # */
+    color: white;
+    font-family: 'Playfair Display', serif;
+    padding: 11px 25px;
+    border: 1px solid white;
+    display: inline-block;
+    position: relative;
+}
+/* --- Testimonials --- */
+.testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    gap: 30px; /* Add gap */
+}
+
+.tbox {
+    box-sizing: border-box;
+    width: calc(50% - 15px); /* Adjust width for gap */
+    padding: 50px;
+    border: 1px solid white;
+    /* margin-top removed, using gap now */
+
+} 
+
+/* .tbox :last-child {
+    font-size: .8rem;
+} */
+
+.tbox p:last-of-type {
+    font-size: 0.8rem;
+    padding-left: 30px;    
+}
+
+/* --- Dropdown --- */
+.dropdown {
+    display: none;
+    position: absolute;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.navbutton:hover .dropdown {
+    display: block
+}
+
+.dropdown .navbutton {
+    width: 120px;
+    background-color: white;
+}
+
+.dropdown .navbutton a {
+    color: magenta;
+}
+
+/* --- Forms --- */
+.inputwrapper {
+    margin-bottom: 20px;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+    padding: 12px 20px;
+    width: 100%; /* Make full width by default */
+    max-width: 500px; /* Limit max width on larger screens */
+    font-size: 1rem;
+    box-sizing: border-box; /* Include padding in width */
+    border: 1px solid lightgrey; /* Add a subtle border */
+    border-radius: 4px; /* Slightly rounded corners */
+}
+
+textarea {
+    min-height: 150px; /* Give textarea some default height */
+    vertical-align: top; /* Align textarea top */
+}
+
+/* === Media Queries for Responsiveness === */
+
+/* Medium screens (Tablets, smaller desktops) */
+@media (max-width: 1024px) {
+    .container {
+        width: 90%; /* Use more screen width */
+    }
+
+    .herobox1 {
+        padding-right: 50px; /* Reduce padding */
+    }
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Small screens (Tablets in portrait, large phones) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack logo and nav */
+        gap: 15px;
+        padding-bottom: 15px;
+        border-bottom: none; /* Remove border */
+    }
+
+    main {
+        flex-direction: column; /* Stack hero boxes */
+        text-align: center;
+    }
+
+    .herobox1 {
+        padding-right: 0; /* Remove padding */
+        margin-bottom: 30px;
+    }
+
+    .cards {
+        flex-direction: column; /* Stack cards */
+        align-items: center; /* Center cards */
+    }
+
+    .card1, .card2, .card3 {
+        width: 80%; /* Make cards wider */
+        min-width: 280px; /* Ensure minimum width */
+    }
+
+    .testimonials {
+        flex-direction: column; /* Stack testimonials */
+        align-items: center; /* Center testimonials */
+    }
+
+    .tbox {
+        width: 80%; /* Make testimonials wider */
+        padding: 30px;
+    }
+
+    input[type=text],
+    input[type=email],
+    textarea {
+        width: 100%; /* Ensure inputs take full width */
+        max-width: none; /* Remove max-width limit */
+    }
+}
+
+/* Extra small screens (Phones) */
+@media (max-width: 480px) {
+    .container {
+        width: 95%; /* Use even more screen width */
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .card1, .card2, .card3, .tbox {
+        width: 95%; /* Make cards/testimonials almost full width */
+    }
+
+    .mybutton, .navbutton {
+        padding: 9px 20px; /* Slightly smaller buttons */
+    }
+
+    .tbox {
+        padding: 20px;
+    }
+}
