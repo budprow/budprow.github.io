@@ -160,6 +160,69 @@ header {
     padding-top: 1rem; /* Add some space above the link */
 }
 
+.project-actions {
+    display: flex; /* Establishes a flex container */
+    align-items: center; /* Optional: vertically aligns items if they have different heights */
+}
+
+.project-actions .github-link {
+    margin-left: auto; /* Pushes this specific link to the far right */
+}
+
+.project-links {
+    display: flex;
+    justify-content: space-between; /* Distributes space between items */
+    align-items: center; /* Optional: vertically aligns items if they have different heights */
+}
+
+.project-title-styled {
+    display: flex; /* Enables flexbox layout */
+    justify-content: space-between; /* Puts space between the items: first item at start, last at end, middle one centered in remaining space */
+    align-items: center; /* Vertically aligns the items in the center */
+    width: 100%; /* Ensures the h3 takes full available width for proper spacing */
+}
+
+.project-title-styled .title-text {
+    /* Optional: If you want to ensure the text itself is centered if it wraps, 
+       though with space-between on the parent, it should already appear centered.
+       This is more for the text alignment within its own span. */
+    text-align: center;
+    /* Optional: Add some horizontal margin if emojis get too close on very small screens,
+       though space-between should handle this. */
+    /* margin: 0 10px; */
+}
+
+/* Optional: If you need specific styling for emojis, though often not necessary */
+/*
+.project-title-styled .title-emoji {
+    
+}
+.project-title-styled .emoji-start {
+    
+}
+.project-title-styled .emoji-end {
+    
+}
+*/
+
+
+/* If you only have two items (View Live Demo and Code on GitHub) and want the 
+   GitHub link pushed all the way to the right, an alternative to justify-content 
+   on the parent is to use margin-left: auto on the specific child: */
+
+/*
+.project-links {
+    display: flex;
+    align-items: center; 
+}
+
+.project-links .github-code-link {
+    margin-left: auto; 
+}
+*/
+
+
+
   /* --- Responsiveness --- */
   /* On smaller screens, you might want to adjust the font size */
   @media (max-width: 768px) {
