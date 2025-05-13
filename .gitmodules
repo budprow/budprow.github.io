@@ -1,0 +1,3 @@
+[submodule "portfolio/social_media_discord_bot"]
+	path = portfolio/social_media_discord_bot
+	url = https://github.com/budprow/social_media_discord_bot.git
